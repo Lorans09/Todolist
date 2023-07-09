@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+    --accent: #fd6060;
+    --default: #999494;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Karla', sans-serif;
+    background:linear-gradient(rgba(245, 241, 241, 0.22), rgba(0,0,0.32)), url(devushka_zont_anime_151317_2560x1024.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+}
+
+.todo {
+    padding:32px;
+    background-color: rgb(255, 255, 255, .79);
+    width: 90vw;
+    border-radius: 26px;
+
+}
+
+
+.todo_content {
+
+}
+
+.todo_title {
+
+}
+
+.todo_new {
+    --size: 50px;
+    display: flex;
+    margin: 16px 0 16px;
+}
+.todo_new input {
+    margin-right: 16px;
+    font-size: 18px;
+    padding: 8px 16px;
+    height: var(--size);
+    border: 1px solid var(--default);
+    border-radius: 5px;
+    flex-grow: 1;
+}
+
+.todo_Add,
+.todo_task-del{
+        cursor: pointer;
+    text-align: center;
+    height: var(--size);
+    width: var(--size);
+    border-radius:var(--size);
+    line-height:calc(var(--size) * 0.91);
+    font-size: 33px;
+    font-weight: 250;
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--default);
+   }
+
+.todo_list {
+    margin-top: 16px;
+}
+
+.todo_list > *:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.todo_task {
+    cursor: default;
+    --size: 30px;
+    display: flex;
+    min-height:var(--size);
+    align-items: center;
+}
+.todo_task_complete .todo_task-text {
+    text-decoration: line-through;
+    color: var(--default)
+}
+
+.todo_task:hover .todo_task-del {
+    display: block;
+}
+
+.todo_checkbox {
+margin-right: 16px;
+    }
+
+.todo_checkbox input {
+    display: none;
+}
+.todo_checkbox input:checked + div {
+    background-color: var(--accent);
+}
+.todo_checkbox input:checked + div::after {
+    display: block;
+}
+
+
+.todo_checkbox div {
+    cursor: pointer;
+    --size: 28px;
+    height: var(--size);
+    width: var(--size);
+    border-radius: 5px;
+    border: 1px solid var(--accent);
+    position: relative;
+}
+.todo_checkbox div::after {
+    content: '✔';
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.todo_task-text {
+    font-size: 20px;
+
+}
+
+.todo_task-del {
+    display: none;
+    margin-left: auto;
+    margin-right: 0;
+    font-size: 40px;
+}
