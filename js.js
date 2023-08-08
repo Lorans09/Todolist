@@ -60,7 +60,7 @@ function isNotHaveTask(text, list) {
 
     list.forEach((task) => {
         if(task.text === text) {
-            alert(`Задача уже есть дебик`)
+            alert(`Такая задача уже есть`)
             isNotHave = false
         }
     })
